@@ -11,20 +11,19 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class AutoSubsystem extends Subsystem {
 	
 	public void AutoSub(){
-//		RobotMap.rightDriveEncoder.reset();
-		
-		while(RobotMap.rightDriveEncoder.get() >= -1850 && RobotMap.leftDriveEncoder.get() >= -1850){
-			RobotMap.robotDrive.arcadeDrive(0,0.5);
-			SmartDashboard.putNumber("encoderCount", RobotMap.rightDriveEncoder.get());
-		}
-		while(RobotMap.rightDriveEncoder.get() <= -1850 && RobotMap.leftDriveEncoder.get() <= -1850){
-			RobotMap.robotDrive.arcadeDrive(0,0);
-		}
-		
+////		RobotMap.rightDriveEncoder.reset();
+//		
+//		while(RobotMap.rightDriveEncoder.get() >= -1850 && RobotMap.leftDriveEncoder.get() >= -1850){
+//			RobotMap.robotDrive.arcadeDrive(0,0.5);
+//			SmartDashboard.putNumber("encoderCount", RobotMap.rightDriveEncoder.get());
+//		}
+////		while(RobotMap.rightDriveEncoder.get() <= -1850 && RobotMap.leftDriveEncoder.get() <= -1850){
+////			RobotMap.robotDrive.arcadeDrive(0,0);
+////		}
+////		
 		}
 	public void setDistances(double x, double y, double z){
 		RobotMap.backLeft.setEncPosition(0);
-		RobotMap.backRight.setEncPosition(0);
 		while(/*RobotMap.backRight.getEncPosition() <= z &&*/ RobotMap.backLeft.getEncPosition() >= z){
 			RobotMap.robotDrive.arcadeDrive(x,y);
 			SmartDashboard.putNumber("encoderCount", RobotMap.backLeft.getEncPosition());

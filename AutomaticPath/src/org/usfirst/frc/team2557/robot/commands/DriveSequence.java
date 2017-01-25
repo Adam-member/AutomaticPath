@@ -11,15 +11,13 @@ public class DriveSequence extends CommandGroup {
 
     public DriveSequence() {
     
-    	addSequential(new AutoDriveCommand(0, -0.5, -100));
-    	RobotMap.backLeft.setEncPosition(0);
-    	RobotMap.backLeft.setEncPosition(0);
-    	addSequential(new AutoDriveCommand(0.5, 0, -20));
-    	RobotMap.backLeft.setEncPosition(0);
-    	RobotMap.backLeft.setEncPosition(0);
-    	addSequential(new AutoDriveCommand(0, 0.5, -5));
-    	RobotMap.backLeft.setEncPosition(0);
-    	RobotMap.backLeft.setEncPosition(0);
+    	addSequential(new AutoDriveCommand(0, -0.7, -100));
+
+    	addSequential(new AutoDriveCommand(0.7, 0, -100));
+   
+//    	addSequential(new AutoDriveCommand(0, 0.5, -5));
+
+    
         // Add Commands here:
         // e.g. addSequential(new Command1());
         //      addSequential(new Command2());

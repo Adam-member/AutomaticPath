@@ -26,12 +26,13 @@ public class AutoDriveCommand extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	RobotMap.backLeft.setEncPosition(0);
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {   	
     	Robot.autoSubsystem.setDistances(x, y, z);
-    	if(RobotMap.leftDriveEncoder.get() >= z){
+    	if(RobotMap.leftDriveEncoder.get() >= (z)){
     		truefalse = true;
     	}
     }
@@ -47,6 +48,7 @@ public class AutoDriveCommand extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
+    	RobotMap.backLeft.setEncPosition(0);
     }
 
     // Called when another command which requires one or more of the same
