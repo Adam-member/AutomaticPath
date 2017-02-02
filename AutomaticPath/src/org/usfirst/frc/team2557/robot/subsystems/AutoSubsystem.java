@@ -28,9 +28,9 @@ public class AutoSubsystem extends Subsystem {
 			RobotMap.robotDrive.arcadeDrive(x,y);
 			SmartDashboard.putNumber("encoderCount", RobotMap.backLeft.getEncPosition());
 		}
-		while(/*RobotMap.backRight.getEncPosition() >= z &&*/ RobotMap.backLeft.getEncPosition() <= z){
-			RobotMap.robotDrive.arcadeDrive(0,0);
-		}
+//		while(/*RobotMap.backRight.getEncPosition() >= z &&*/ RobotMap.backLeft.getEncPosition() <= z){
+//			RobotMap.robotDrive.arcadeDrive(0,0);
+//		}
 	}
 	
     
